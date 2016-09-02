@@ -1,0 +1,2355 @@
+﻿
+body 
+{
+	font-family: Verdana,Arial,Helvetica,sans-serif;
+	font-size: 10px;
+	background-color: #FFFFFF;
+}
+
+#site
+{
+	width:100%;
+}
+
+#cabecalho
+{
+	height:65px;
+	background-image:url("../images/header_bg.gif");
+	background-repeat:no-repeat;
+	background-position:center right;
+	border-bottom:1px solid #000;
+}
+
+h1#logo {
+	background: url("../images/logo.gif") no-repeat scroll 0 0 transparent;
+
+
+
+}
+
+h1#logo a {
+	display: block;
+	height: 70px;
+	text-indent: -5000em;
+	width: 400px;
+}
+
+h2 
+{	
+	font-size: 14px;
+	font-weight: bold;
+}
+
+#tituloPagina 
+{
+	width:100%;
+	height:45px;
+	font-size: 18px;
+	font-weight: bold;
+	border-bottom:1px solid #000;
+}
+
+#tituloPagina h2
+{
+	float:left;
+	padding:10px;
+	padding-left:20px;
+}
+
+#tituloPagina h2 a
+{
+	text-decoration:none;
+	color:#000;
+}
+
+#tituloPagina h3
+{
+	float:right;
+	padding:10px;
+	color:#666;
+	padding-right:20px;
+}
+/*
+Menu - Inicio
+*/
+#MenuSuperior
+{
+	background-image:url('../images/internet/fundo_preto3.gif');
+	height: 22px;
+}
+
+#MenuSuperior ul
+{
+	padding: 0px 0px 0px 0px;
+	margin: 0px 0px 0px 0px;
+	z-index: 100;
+}
+
+#MenuSuperior li
+{
+	list-style: none outside none;
+}
+
+#MenuSuperior li a
+{
+	text-decoration:none;
+	padding:5px;
+	display:block;
+	color:#C00;
+	background-color:#EEE;
+	border: 1px solid #FFF;
+	width: 120px;
+}
+
+#MenuSuperior li a:hover, #MenuSuperior li a.highlighted
+{
+	background-color: #C6CFD7;
+	color: #000000;
+}
+
+#MenuSuperior li li a
+{
+	width: 190px;
+}
+/*
+Menu - Fim
+*/
+
+div.accessKey
+{
+	position: absolute;
+	top: 10px;
+	left: 300px;
+	display: none;
+	border: 1px solid #000;
+	width: 200px;
+	font-size: 12px;
+	padding: 5px;
+	font-weight: bold;
+}
+
+#nomeUsuario
+{
+	padding-left:10px;
+}
+
+#dadosDoUsuario
+{
+	display: inline-block;
+	width: 98%;
+	text-align: left;
+	padding: 10px 0px 10px 0px;
+}
+
+div.inicioAlertas
+{
+	font-size: 12px;
+	width: 750px;
+	padding-bottom: 15px;
+	margin-left: auto;
+	margin-right: auto;
+	text-align: left;
+	display: table;
+}
+
+div.containerConteudo
+{
+	-webkit-border-radius: 12px;
+	-moz-border-radius: 12px;
+	border-radius: 12px;
+	border: 2px solid #CC0000;
+	margin-left: auto;
+	margin-right: auto;
+	margin-top: 20px;
+	margin-bottom: 50px;
+	display: inline-block;
+	background-color: #E6E6E6;
+	padding: 20px;
+}
+
+
+containerConteudo2
+{
+	background-color: #FFFFFF;
+}
+
+div.consultaUtilCred {
+	float: left;
+	height: 45px;
+	padding: 15px 10px 0 0;
+	text-align: right;
+	width: 25%;
+}
+
+.LarguraMinima800
+{
+	min-width:800px;
+}
+
+
+
+
+.LarguraFixa100
+{
+	width: 100%;
+}
+
+.LarguraFixa90
+{
+	width: 90%;
+}
+
+
+.LarguraFixa75
+{
+	width: 75%;
+}
+
+
+.LarguraFixa60
+{
+	width: 60%;
+}
+
+.LarguraFixa50
+{
+	width: 50%;
+}
+
+.LarguraFixa40
+{
+	width: 40%;
+}
+
+.LarguraFixa30
+{
+	width:30%;
+}
+
+.LarguraFixa20
+{
+	width:20%;
+}
+
+.LarguraFixa15
+{
+	width:15%;
+}
+
+
+.LarguraFixa10
+{
+	width:10%;
+}
+
+.LarguraFixa5
+{
+	width:5%;
+}
+
+
+
+.LarguraDDD
+{
+	width:25px;
+}
+
+
+.LarguraTelefone
+{
+	width:65px;
+}
+
+.LarguraCEP
+{
+	width:70px;
+}
+
+
+.LarguraCNPJ
+{
+	width:200px;
+}
+
+.LarguraNome
+{
+	width:400px;
+}
+
+
+
+.LarguraLogin
+{
+	width: 550px;
+}
+
+.Direita
+{
+	float: right;
+}
+
+legend
+{
+	text-align: left;
+}
+
+#footer
+{
+	position: fixed;
+	bottom: 0px;
+	width: 100%;
+	background-color: #666;
+	clear: both;
+	color: #FFF;
+	font-size: 11px;
+	height: 30px;
+	padding: 7px 0px 3px 0px;
+	text-align: center;
+}
+
+#footer p, #footer address {
+	color: #FFFFFF;
+	font-family: Arial,Helvetica,sans-serif;
+	font-size: 11px;
+	font-style: normal;
+	margin: 0;
+	text-align: center;
+}
+
+input.button {
+	background-color: #CDCDCD;
+	border: 1px solid #ADADAD;
+	color: #000000;
+	height: 18px;
+	margin: 2px;
+}
+
+input.button[disabled]
+{
+	background-color: #cdcdcd;
+	border: solid 1px #adadad;
+	color: #ffffff;
+	margin: 2px;
+	padding: 0px 6px 0px 6px;
+}
+
+input, textarea, select
+{
+	font-family: Verdana,Arial,Helvetica,sans-serif;
+	font-size: 10px;
+}
+
+input.text, textarea.text, select.text
+{
+	color: #cc0000;
+	border: #adadad 1px solid;
+}
+
+
+input.textBig 
+{
+	width:400px;
+}
+
+.corClara
+{
+	color: #C0C0C0;
+	border: #adadad 1px solid;
+}
+
+.corBranca
+{
+	color: #FFFFFF;
+	border: #adadad 1px solid;
+}
+
+.corPreta
+{
+	color: #000000;
+}
+
+.corAviso
+{
+	color:Red;
+}
+
+.fonteGrande
+{
+	font-size:large;
+}
+
+.fonteMedia
+{
+	font-size:12px;
+}
+
+.fontePequena
+{
+	font-size:1;
+}
+
+.posicaoAbsoluta
+{
+	position: absolute;
+}
+
+
+
+
+
+table.gridView 
+{
+	background-color: #FFFFFF;
+	 border: 1px solid #000000;
+	 border-collapse: collapse;
+	 width: 100%;
+}
+
+th.gridViewTituloColuna, tr.gridViewTituloColuna
+{
+	background-color: #BCBCBC;
+	border-bottom: 1px solid #000000;
+	font-weight: bold;
+	text-align: center;
+}
+
+tr.linhaAlternada 
+{
+	background-color: #dddddd;
+}
+
+tr.linhaSelecionada
+{
+	background-color: #c0daff;
+}
+
+tr.borda 
+{
+	border: 1px solid #000000;
+}
+
+
+tr.linha
+{
+	background-color: #ffffff;
+}
+
+tr.gridViewEmptyMsg 
+{
+	text-align: left;
+	font-weight: bold;
+	border: none 0px;
+}
+
+.gridViewPagerTemplate 
+{
+	text-align: right;
+	padding:3px 10px 3px 3px;
+	border: 1px solid #000000;
+	background-color:#FFF;
+}
+
+tr.gridViewPagerTemplate 
+{
+	text-align: right;
+	padding-right: 10px;
+	border-top: 1px solid #000000;
+	border-top: 2px solid #000000;
+}
+
+
+a.ocultarLink
+{
+	text-decoration: none;
+}
+
+a, a:hover
+{
+	font-family: Verdana, Arial, Helvetica;
+	font-weight: normal; 
+	font-size: 10px;
+}
+
+a
+{
+	color: #CC0000;
+}
+
+a:hover
+{
+	color: #000000;
+	text-decoration: none;
+}
+
+.alinharCentro 
+{
+	text-align: center;
+}
+
+.alinharEsquerda 
+{
+	text-align: left;
+}
+
+
+.espacarEsquerda
+{
+	padding-left:10px;	
+}
+
+
+.espacarDireita
+{
+	padding-right:10px;	
+}
+
+
+
+.espacarAcima2
+{
+	padding-top:2px;
+}
+
+
+.espacarEsquerda20
+{
+	padding-left:20px;	
+}
+	
+	
+.espacarAcimaDiv
+{
+	margin-top:25px	
+}
+
+.espacarPForm p
+{
+    margin-bottom:5px;   
+}
+
+.espacarAbaixoDiv
+{
+	margin-bottom:35px	
+}
+	
+	
+.rbl input[type="radio"]
+{
+   margin-left: 10px;
+   margin-right: 1px;
+}
+	
+
+.alinharDireita 
+{
+	text-align: right;
+}
+
+.alinharJustificado
+{
+	text-align: justify;
+}
+
+tr.linhaAlternada 
+{
+	background-color: #DDDDDD;
+}
+
+.fundoBranco 
+{
+	background-color: #FFFFFF;
+	margin:10px;
+}
+
+
+.floatLabel
+{
+	font-weight:bold;
+	float:left;
+	width:180px;
+	height:20px;
+	vertical-align:bottom;
+}
+
+
+.floatLabelNoWidth
+{
+    font-weight:bold;
+    float:left;
+    height:20px;
+    vertical-align:bottom;
+}
+
+
+.floatLabelMedio
+{
+	font-weight:bold;
+	float:left;
+	width:150px;
+	height:20px;
+	vertical-align:bottom;
+}
+
+
+.floatLabelPequeno
+{
+	font-weight:bold;
+	float:left;
+	width:80px;
+	vertical-align:bottom;
+}
+
+
+.floatLabelPequenoNoBold
+{
+	float:left;
+	width:80px;
+	height:20px;
+	vertical-align:bottom;
+}
+
+
+.floatLeft
+{
+	float:left;
+}
+
+
+.floatInputBottom
+{
+    float:left;
+    vertical-align:bottom;
+}
+
+.floatLabelNoBold
+{
+	float:left;
+	width:170px;
+	height:20px;
+	vertical-align:bottom;
+	text-align: left;
+}
+
+
+.floatLabelNoBoldMedio
+{
+	float:left;
+	width:130px;
+	height:16px;
+	vertical-align:bottom;
+	text-align: left;
+}
+
+
+.floatLabelNoBoldGrande
+{
+	float:left;
+	width:220px;
+	height:18px;
+	vertical-align:bottom;
+	text-align: left;
+}
+
+
+.floatLabelGrande
+{
+	float:left;
+	width:240px;
+	height:18px;
+	vertical-align:bottom;
+	text-align: left;
+    font-weight:bold;
+}
+
+
+
+
+.floatLabelLeft
+{
+	font-weight:bold;
+	float:left;
+	width:180px;
+	height:20px;
+	vertical-align:bottom;
+	text-align: left;
+}
+
+
+.floatLabelNoBoldBig
+{
+	float:left;
+	height:20px;
+	vertical-align:bottom;
+	text-align: left;
+}
+
+.floatInput
+{
+	float:left;
+	text-align: left;
+ }
+
+p.mensagemBemVindo
+{
+	text-align: left;
+	margin: 30px;
+	font-size: large;
+	font-weight: bold;
+}
+
+div.consultaNFPeriodoEmissao
+{
+	float: left;
+	padding-top: 40px;
+	text-align: right;
+
+	width: 40%;
+	height: 60px;
+}
+
+ul.consultaNFItens
+{
+	float: left;
+	list-style: none outside none;
+	margin: 0;
+	padding: 0px 0px 0px 5px;
+	width: 30%;
+}
+
+div.consultaNFInformacoes
+{
+	display: table;
+	width: 100%;
+	text-align: center;
+	padding-bottom: 20px;
+}
+
+div.consultaNFBotoes
+{
+	display: inline-block;
+	width: 400px;
+	text-align: center;
+}
+
+div.tblconsultaGeralCol01
+{
+	float:left;
+	text-align: center;
+	width: 5%;
+}
+
+div.tblconsultaGeralCol02
+{
+	float:left;
+	text-align: right;
+	width: 40%;
+}
+
+div.tblconsultaGeralCol03
+{
+	float:left;
+	text-align: left;
+	padding-left: 10px;
+	width: 40%;
+}
+
+div.ateOpcao 
+{
+	float:left;
+}
+
+div.tblconsultaGeralTotal
+{
+	float:left;
+	text-align: center;
+	padding-left: 10px;
+	width: 100%;
+}
+
+div.loginAreaSuperior
+{
+	display: table;
+}
+
+div.loginOpcoes
+{
+	float: left;
+	margin: 15px;
+	border-right: 1px solid #C0C0C0;
+	width: 200px;
+}
+
+ul.loginOpcoesLista
+{
+	list-style: none outside none;
+	margin: 0px;
+	padding: 0px;
+}
+
+
+
+.pesquisaEntidadesOpcoes
+{
+	float: left;
+	margin-right: 15px;
+}
+
+ul.pesquisaEntidadesOpcoesLista
+{
+	list-style: none outside none;
+	margin: 0px;
+	padding: 0px;
+}
+
+
+div.opcoesBuscaEntidades
+{
+	text-align: left;
+	padding: 5px 0px 40px 10px;
+}
+
+
+
+div.line100Padded
+{
+	width:100%;
+	clear:left;
+	padding:3px 0 0 0;
+}
+
+
+div.desbloqueioAcessoQtdDocsTable
+{
+	width:400px;
+}
+
+
+div.line100Padded2
+{
+	width:100%;
+	clear:left;
+	padding:15px 0 0 0;
+}
+
+
+span.loginItemOpcoes
+{
+	font-weight: bold;
+	text-align: right;
+	float: right;
+	width: 100%;
+	height: 30px	
+}
+
+span.loginItemOpcoes input
+{
+	float: right;
+}
+
+div.loginTextoOpcoes
+{
+	width: 150px;
+	text-align: center;
+}
+
+div.loginInformacao
+{
+	width: 160px;
+	height: 30px;
+	text-align: center;
+	display: inline-block;
+	padding: 25px 0px 0px 10px;
+	float: left;
+}
+
+div.loginOpcoesResultado
+{
+	width: 140px;
+	text-align: left;
+	display: inline-block;
+	padding: 5px 0px 0px 30px;
+	float: left;
+    
+}
+
+div.loginCertificadoDigital
+{
+	padding-top: 80px;
+	width: 110px;
+	height: 150px;
+	padding: 80px 0px 0px 10px;
+	float: right;
+}
+
+div.loginNaoContribuinte
+{
+	text-align: center;
+	display: inline-block;
+	width: 100%;
+	margin: auto;
+}
+
+div.loginParaSeCadastrar
+{
+	width: 49%;
+	float: left;
+	padding-top: 5px;
+	text-align: right;
+}
+
+div.loginPFePJ
+{
+	width: 50%;
+	float: right;
+	text-align: left;
+}
+
+div.loginCamposObrigatorios
+{
+	float: left;
+	display: inline;
+	text-align: left;
+}
+
+div.loginMensagemSemPermissao
+{
+	color: #FF0000;
+}
+
+div.demonstrativoIRPrezadoConsumidor
+{
+	text-align: justify;
+	background-color: #FFFFFF;
+	border: 1px solid #000000;
+	padding: 5px;
+	width: 620px;
+	font-size: larger;
+}
+
+div.demonstrativoIRGoverno
+{
+	margin-top: 20px;
+	text-align: center;
+	background-color: #FFFFFF;
+	border: 1px solid #000000;
+	padding: 5px;
+	width: 620px;
+	font-weight: bold;
+	font-size: larger;
+}
+
+div.demonstrativoIRNomeBeneficiario
+{
+	margin-top: 20px;
+	text-align: center;
+	background-color: #FFFFFF;
+	border: 1px solid #000000;
+	padding: 5px;
+	width: 620px;
+	font-size: larger;
+}
+
+div.demonstrativoIRResultado
+{
+	margin-top: 20px;
+	margin-bottom: 20px;
+	text-align: left;
+	background-color: #FFFFFF;
+	border: 1px solid #000000;
+	padding: 5px;
+	width: 620px;
+	font-size: larger;
+	display: inline-block;
+}
+
+div.demonstrativoIRResultadoEsquerda
+{
+	width: 50%;
+	float: left;
+	text-align: left;
+}
+
+div.demonstrativoIRResultadoDireita
+{
+	width: 47%;
+	float: right;
+	text-align: right;
+}
+
+
+div.grupoDeDados
+{
+    border-top-width:1px;
+    border-top-color:#D3D3D3;
+    border-top-style:ridge;
+}
+
+
+.IconMsgLeft
+{
+    float: left;
+    width:35px;
+    height:35px;
+    margin:-5px 10px 5px -10px;
+    display:none;
+}
+
+/*RECLAMACAO*/
+
+
+span.iconeInformacao
+{
+	display: inline-block;
+	text-align: right;
+	cursor: help;
+	background: transparent url('../Images/helpVerySmall.png') no-repeat scroll top center;
+	width: 18px;
+	height: 18px;
+	vertical-align: top;
+}
+
+
+
+#Reclamacao ul#ListaMotivos
+{
+	list-style: none outside none;
+	margin: 0px;
+	padding: 0px;
+	text-align: left;
+	
+}
+#Reclamacao ul#ListaMotivos label
+{
+    line-height:25px;
+}
+
+
+#Reclamacao p.alinharEsquerda
+{
+    margin-top:15px;
+}
+
+
+#Reclamacao p.formEsquerda
+{
+    text-align: left;
+    margin-top:5px;
+}
+
+#Reclamacao p.formEsquerda label
+{
+    width:20%;
+    display:inline-block;
+}
+
+#Reclamacao .painelAcoes
+{
+    margin-top:25px;
+}
+
+
+.elemHidden
+{
+    visibility:hidden;  
+    overflow:hidden;
+    width:1px;
+    height:1px;
+}
+
+
+.ui-icon_Mensagem{
+    background-image: URL('blitzer/images/ui-icons_ffffff_256x240.png');
+    height: 16px;
+    width: 16px;
+    background-repeat: no-repeat;
+    overflow: hidden;
+    text-indent: -99999px;
+}
+
+/*
+#Reclamacao span.iconeInformacao
+{
+	
+	display: inline-block;
+	text-align: right;
+	cursor: help;
+	background: transparent url('../Images/helpVerySmall.png') no-repeat 0px 0px;
+	width: 18px;
+	height: 18px;
+}
+*/
+/*RECLAMACAO*/
+
+
+
+ul.reclamacaoRegistrarListaMotivos
+{
+	list-style: none outside none;
+	margin: 0px;
+	padding: 0px;
+	text-align: left;
+}
+
+#Reclamacao li.BtnWizClaro {
+	background: transparent url('../images/Reclamacao/botaoClaro.jpg') no-repeat scroll top center;
+	display: inline-block;
+	height: 25px;
+	width: 130px;
+	margin-right: 30px;
+	padding-top: 7px;
+	text-decoration: none;
+	font-weight: bold;
+}
+
+#Reclamacao li.BtnWizEscuro {
+	background: transparent url('../images/Reclamacao/botaoEscuro.jpg') no-repeat scroll top center;
+	display: inline-block;
+	height: 26px;
+	width: 130px;
+	margin-right: 30px;
+	padding-top: 7px;
+	text-decoration: none;
+	font-weight: bold;
+}
+
+span.iconeInformacao
+{
+	display: inline-block;
+	text-align: right;
+	cursor: help;
+	background: transparent url('../Images/helpVerySmall.png') no-repeat scroll top center;
+	width: 18px;
+	height: 18px;
+}
+
+div.reclamacaoRegistrarFornecedorEsquerda
+{
+	width: 40%;
+	height: 25px;
+	float: left;
+	text-align: right;
+}
+
+div.reclamacaoRegistrarFornecedorDireita
+{
+	width: 59%;
+	height: 25px;
+	float: right;
+	text-align: left;
+}
+
+div.reclamacaoConsultarFiltroEsquerda
+{
+	display: inline-block;
+	width: 15%;
+	text-align: left;
+	vertical-align: top;
+	padding: 2px;
+}
+
+div.reclamacaoConsultarFiltroDireita
+{
+	display: inline-block;
+	width: 80%;
+	text-align: left;
+	vertical-align: top;
+	padding: 2px;
+}
+
+div.reclamacaoConsultarLegenda
+{
+	display: inline-block;
+	padding-right: 20px;
+	padding-bottom: 10px;
+}
+
+div.reclamacaoConsultarHistoricoBloco
+{
+	border: 1px solid #000;
+	vertical-align: top;
+	margin-bottom: 10px;
+	padding-bottom: 5px;
+}
+
+div.reclamacaoConsultarHistoricoData
+{
+	background-color: #FFFFFF;
+	text-align: left;
+	padding: 3px;
+	font-weight: bold;
+}
+
+div.reclamacaoConsultarHistoricoNome
+{
+	display: inline-block;
+	width: 19%;
+	height: 100%;
+	float: left;
+	padding-top: 10px;
+}
+
+div.reclamacaoConsultarHistoricoDados
+{
+	display: inline-block;
+	text-align:left;
+	width: 80%;
+}
+
+div.reclamacaoConsultarHistoricoDadosEsquerda
+{
+	text-align: left;
+	display: inline-block;
+	width: 20%;
+	vertical-align: top;
+	padding: 1px;
+}
+
+div.reclamacaoConsultarHistoricoDadosDireita
+{
+	text-align: left;
+	display: inline-block;
+	width: 75%;
+	vertical-align: top;
+	padding: 1px;
+}
+
+div.reclamacaoFormalizarDenunciaEsquerda
+{
+	text-align: left;
+	display: inline-block;
+	width: 25%;
+	vertical-align: top;
+	padding: 3px;
+	font-weight: bold;
+}
+
+div.reclamacaoFormalizarDenunciaDireita
+{
+	text-align: left;
+	display: inline-block;
+	width: 70%;
+	vertical-align: top;
+	padding: 3px;
+}
+
+div.reclamacaoInstruirDenunciaEsquerda
+{
+	text-align: left;
+	display: inline-block;
+	width: 25%;
+	vertical-align: top;
+	padding: 3px;
+	font-weight: bold;
+}
+
+div.reclamacaoInstruirDenunciaDireita
+{
+	text-align: left;
+	display: inline-block;
+	width: 70%;
+	vertical-align: top;
+	padding: 3px;
+}
+
+fieldset.anexoArquivos,div.anexoArquivos
+{
+	width: 50%;
+	text-align: center;
+	display: inline-table;
+	padding: 15px;
+}
+
+
+/*Dialog Vermelho*/
+div.ui-widget-header-error
+{
+   background: #c4060c url(../images/ui-bg_gloss-wave_75_c4060c_500x100.png) 50% 50% repeat-x; 
+   border: 1px solid #c4060c; 
+   color: #FFFFFF; 
+  font-weight: bold;
+}
+
+/*Dialog Azul*/
+div.ui-widget-header-info  
+{
+	border: 1px solid #4297d7; 
+	background: #2191c0 url(../images/ui-bg_gloss-wave_75_2191c0_500x100.png) 50% 50% repeat-x; 
+	color: #eaf5f7; 
+	font-weight: bold; 
+}
+
+/*Dialog Verde*/
+div.ui-widget-header-quest  
+{
+	border: 1px solid #005414; 
+	background: #519a55 url(../images/ui-bg_gloss-wave_75_519a55_500x100.png) 50% 50% repeat-x; 
+	color: #004b18; 
+	font-weight: bold; 
+}
+
+
+div.ui-widget-header-info .ui-icon  
+{
+	width: 16px;
+	height: 16px;
+	background-image: url(../images/ui-icons_0078ae_256x240.png); 
+}
+
+
+#tooltip{
+	font-family:Verdana, Arial, Helvetica;
+	font-size:10px;
+	text-align:left;
+	position: absolute;
+	width: 150px;
+	border: 1px solid gray;
+	padding: 1px;
+	background-color: Gray;
+	visibility: hidden;
+	z-index: 100;
+}
+
+.Mask
+{
+	color: #6f6f6f;
+	font-size: 5;
+	float:left;
+	height:20px;
+	vertical-align:bottom;
+}
+
+.MaskNoFloat
+{
+	color: #6f6f6f;
+	font-size: 5;
+	height:20px;
+}
+
+.Tamanho100px
+{
+	width:100px;
+}
+
+.Tamanho140px
+{
+	width:140px;
+}
+
+.Tamanho400px
+{
+	width:400px;
+}
+
+.Tamanho550px
+{
+	width: 550px;
+}
+
+
+.Margin10px
+{
+	margin:10px;
+}
+
+.Sorteio_Item
+{
+	display: inline-block;
+	height: 79px;
+	width: 144px;
+	background-color: #E6E6E6;
+	margin: 14px;
+
+	/*-webkit-border-radius: 12px;
+	-moz-border-radius: 12px;
+	border-radius: 12px;*/
+
+}
+
+
+.Sorteio_Item_Bilhete
+{
+	display: inline-block;
+	height: 60px;
+	width: 144px;
+	background-color: #E6E6E6;
+	margin: 3px;
+}
+
+.Sorteio_Numero
+{
+	margin-top: 30px;
+	overflow: hidden;
+	font-size: 12pt;
+	font-weight: bold;
+}
+
+.Sorteio_Data
+{
+	margin-top: 14px;
+	padding-left: 25px;
+	font-weight: bold;
+	overflow: hidden;
+	text-align: left;
+}
+
+.Sorteio_Link
+{
+	padding-top: 10px;
+}
+
+.Sorteio_Paginacao
+{
+	margin-top: 15px;
+	text-align: right;
+	clear: both;
+}
+
+.Sorteio_Paginacao span
+{
+	display: inline-block;
+}
+
+.Sorteio_Paginacao input
+{
+	display: inline-block;
+	vertical-align: middle;
+	border: 0px;
+}
+
+.Sorteio_Status_Finalizado
+{
+	background-position: center;
+	background-repeat: no-repeat;
+	background-image: url(../Images/Sorteio/SorteioFinalizado.png);
+}
+
+.Sorteio_Status_Gerado
+{
+	background-position: center;
+	background-repeat: no-repeat;
+	background-image: url(../Images/Sorteio/SorteioGerado.png);
+}
+
+.Sorteio_Status_EmAndamento
+{
+	background-position: center;
+	background-repeat: no-repeat;
+	background-image: url(../Images/Sorteio/SorteioEmAndamento.png);
+}
+
+.Sorteio_Status_Bilhete_Gerado
+{
+
+	background-position: center;
+	background-repeat: no-repeat;
+	background-image: url(../Images/Sorteio/SorteioBilheteGerado.png);
+}
+
+.Sorteio_Status_Bilhete_Premiado
+{
+	background-position: center;
+	background-repeat: no-repeat;
+	background-image: url(../Images/Sorteio/SorteioBilhetePremiado.png);
+}
+
+.Sorteio_Legenda
+{
+	text-align: left;
+	height: 50px;
+	width: 100px;
+	vertical-align: middle;
+	display: inline-block;
+}
+
+.Sorteio_Status
+{
+	-webkit-border-radius: 12px;
+	-moz-border-radius: 12px;
+	border-radius: 12px;
+
+	
+	text-align: center;
+	padding: 3px;
+	margin-bottom: 20px;
+	vertical-align: middle;
+	display: inline-block;
+	width: 280px;
+	height: 180px;
+	background-color: #E6E6E6;
+
+}
+
+.Sorteio_Texto
+{
+	display: inline-block;
+	width: 230px;
+	text-align: left;
+	vertical-align: top;
+	padding: 5px;
+}
+
+.Sorteio_NumeroBilhete, .Sorteio_NumeroBilhete:hover
+{
+    font-weight: bold;
+    font-size: 9px;
+}
+
+.Sorteio_Bilhete
+{
+    display: inline-block;
+    width: 100px;
+    padding-top: 15px;
+    padding-left: 45px;
+    vertical-align: middle;
+    font-size: 9px;
+}
+
+div.btCtDireito
+{
+   float:right;
+   width:14px;
+   height:24px;		
+   background-Image:URL(../Images/Sorteio/botao_Sorteio_Direita.jpg);  
+}
+
+div.btCtEsquerdo
+{
+	float:left;
+	width:14px;
+	height:24px;	
+	background-Image:URL(../Images/Sorteio/botao_Sorteio_Esquerda.jpg);  
+}
+
+div.btConteudo
+{
+   float:left;
+   padding-top:06px;		
+}
+
+div.btBilhetes
+{
+	margin:0 auto;
+	height:24px;
+	background-Image:URL(../Images/Sorteio/botao_Sorteio_Centro.jpg);
+	clear:left;
+}
+
+a.btTextBilhetes
+{
+	text-decoration:none;
+	color:#FFFFFF;
+	font-family:verdana;
+	font-size:12px;
+	font-weight:bold;	   
+}
+
+
+
+
+#dvCartaoPrincipal
+{
+	width: 660px; 
+	height: 291px; 
+	padding-top: 10px;
+	border: 0px solid;
+	margin-left:50px;
+}
+
+div.CredencialNFP
+{
+	width:320px;
+	padding-top:10px;
+	border:0px solid;
+	float:left;
+}
+
+div.CartaoCredencialNFP
+{
+	margin: 47px 0 0 331px; 
+	height: 196px; 
+	width: 318px; 
+	font-family: Verdana, Arial, Helvetica; 
+	font-size: 10px
+}
+
+div.CupomFiscal {
+	background-color: #FFFFCC;
+	border: 1px solid #000000;
+	font-family: Courier New,Courier;
+	font-size: 10px;
+	margin-bottom: 30px;
+	margin-left: 250px;
+	margin-top: 30px;
+	width: 400px;
+}
+
+
+.CFTamanhoFixo 
+{
+	font-family: Courier New, Courier;
+	font-size: 10px;
+	text-align:left;
+}
+
+.MarginBottom50px
+{
+	margin-bottom:50px;
+}
+
+
+table {
+	border: medium none;
+	border-collapse: collapse;
+	font-family: Verdana,Arial,Helvetica,sans-serif;
+	font-size: 10px;
+	width: 100%;
+}
+
+.tornaInvisivel
+{
+   display:none;
+}
+.tornaVisivel
+{
+   display:inherit;
+}
+
+.Mask
+{
+	color: #6f6f6f;
+	font-size: 5;
+	float:left;
+	height:20px;
+    vertical-align:bottom;
+}
+
+
+.IndiceConfNegocio
+{
+    background-color:transparent; 
+    padding: 3px 30px 3px 30px; 
+    display:inline-block; 
+    -webkit-border-radius: 8px; 
+    -moz-border-radius: 8px; 
+    border-radius: 8px; 
+    border: 2px solid #000000; 
+    float:left;
+}
+
+
+
+/*Indice de Confiabilidade Control*/
+#IndiceConfiab
+{
+    width:256px;
+    height:46px;
+    display:block;
+    background:url(../Images/indiceConfiabilidade3.jpg) no-repeat 0 12px;
+    float:right;
+    font-family:Verdana, Arial, Calibri, Times New Roman;
+    font-size:9px;
+    color:#595959;
+
+}
+
+.IndiceConfiabSeta
+{
+    width:236px;
+    height:19px;
+    display:block;
+    background:url(../Images/indiceConfiabSeta.png) no-repeat 0px 0px;
+    z-index:1;
+}
+
+.IndiceConfiabSeta2
+{
+    width:15px;
+    height:17px;
+    display:block;
+    position :relative;
+    left  :+95px;
+    background:url(../Images/indiceConfiabSeta2.png) no-repeat 0px 0px;
+    z-index:2;
+    margin:0 0 0px 0;
+} 
+
+
+div.desbloqueioInput
+{
+	border-bottom:dashed #000000; 
+	border-left:none; 
+	border-top:none; 
+	border-right:none;
+	border-bottom-width:thin;
+	padding:4px, 4px, 0px, 4px;
+	vertical-align:bottom;
+}
+
+
+
+div.desbloqueioField
+{
+	font-weight: bold;
+	padding:4px;
+	padding-left:15px;
+}
+
+div.FormularioGrupoExterno
+{
+	font-family: Verdana, Arial, Helvetica, sans-serif;
+	font-size: 10px;
+	width: 100%;
+	border-collapse: collapse;
+	border:solid #000000; 
+	border-width:thin;
+}
+
+div.FormularioSubGrupo
+{
+	font-weight:bold; 
+	font-size:10px; 
+	padding: 5px 0px 4px 9px;
+}
+
+
+div.FormularioGrupo
+{
+	font-weight:bold; 
+	font-size:13px; 
+	padding: 8px 0px 2px 2px;
+}
+
+div.FormularioGrupoItem
+{
+	padding:1px;
+	padding-left:13px;
+}
+
+
+/*Ajax*/
+.carregando
+{
+    background: url(../Images/loadingCinza.gif) no-repeat 0 0;
+    width: 20px;
+    height: 20px;
+    display: block;
+    float: left;
+}
+.sucesso
+{
+    background: url(../Images/iconeOkNok.png) no-repeat 0 -22px;
+    width:22px;
+    height:22px;
+    display:block;
+    float:left;
+}
+.falha
+{
+    background: url(../Images/iconeOkNok.png) no-repeat 0 0;
+    width:22px;
+    height:22px;
+    display:block;
+    float:left;
+}
+
+a.linkValidar{
+    float:left;
+    font-size:10px;
+    color:#000000;
+    text-decoration:underline;
+    /*display:none;*/
+    margin:0 10px 0 5px;
+    
+}
+
+
+.textoQtdFalhas
+{
+    color:Red;
+    font-size:14px;
+    font-weight:bold;    
+}
+.centralizarDiv
+{
+    margin-left:auto;
+    margin-right:auto;
+    clear:both;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    width:95%;
+}
+
+.centralizarDiv2
+{
+    margin-left:auto;
+    margin-right:auto;
+    margin-top:20px;
+    margin-bottom:20px;
+    clear:both;
+}
+
+.tornaInvisivel
+{
+   display:none;
+}
+.tornaVisivel
+{
+   display:inherit;
+}
+
+.bordaTeste
+{
+	border:2px solid red;
+}
+
+.ContainerLog
+{
+    width:98%;
+    height:98%;
+    display:block;
+    /*border:1px solid red;*/
+    overflow:visible;
+    margin-left:auto;
+    margin-right:auto;
+    clear:both;
+    
+}
+
+
+
+
+.ContainerLogEmail
+{
+    overflow:auto; 
+    max-width:95%; 
+    margin-left: auto; 
+    margin-right: auto; 
+    max-height:500px;
+    margin-top:20px;
+}
+
+
+.ContainerLogEmailMensagem
+{
+    background-color:White;
+    font-size:larger;
+    border:1px solid black;
+    width:500px;
+    height:20px;
+    display:block;
+    margin-left:auto;
+    margin-right:auto;
+    clear:both;
+    padding-top:5px;
+    margin-top:20px;
+}
+
+
+.ListaLog
+{
+    height:90%;
+}
+
+
+/*Mensagens no cadastro*/
+
+span.warning
+{
+	font-weight:bold;
+	font-size:10px;
+    width:100%;
+    color:#FF7D00;
+    
+}
+
+
+span.error
+{
+	color:Red;
+	font-weight:bold;
+	vertical-align:middle;
+	font-size:10px;
+}
+
+div.dvErrorFields
+{
+	border:1px solid red;	
+	margin-bottom:04px;
+}
+
+div.dvErrorFields span.error 
+{
+	font-size:10px;
+	color:Red;
+	font-weight:bold;
+}
+
+div.cadastroErrorMsg
+{
+	clear:left;
+	width:100%;
+	
+}
+
+div.error
+{
+	color:Red;
+	font-weight:bold;
+	text-align: center;
+}
+
+
+div.CadastroPar 
+{
+    height:40px;
+	margin-bottom:05px;
+	background-color:#f0f0f0;
+}
+
+div.CadastroImpar
+{
+    height:40px;
+	margin-bottom:05px;
+}
+
+span.loginLabel
+{
+    font-weight:bolder;
+    font-size:12px;
+}
+
+
+div.barraAcessibilidadeLogin
+{
+	border-bottom: 1px solid #000000;
+	background-color: #E6E6E6;
+	height:45px;
+	min-width: 1100px;
+
+}
+
+
+div.barraAcessibilidadeNormal
+{
+	border-bottom: 1px solid #000000;
+	background-color: #E6E6E6;
+	height:45px;
+	min-width: 750px;
+
+}
+
+
+#barraAcessibilidadeContainer
+{
+    background-color: #E6E6E6;
+   height :inherit;
+    
+}
+
+
+a.linkBarraAcessibilidade 
+{
+	padding-left:10px;
+	float:left;
+}
+
+
+a.linkBarraAcessibilidade:visited
+{
+	color: #CC0000;
+
+}
+
+div.containerLinksBarraSuperior
+{
+	padding-top:12px;
+    /*margin:0 auto;
+    vertical-align: middle;*/
+    float:left;
+    height:inherit;
+}
+
+#linksAcessibilidadeGerais
+{
+	height:inherit;
+
+	display:table-cell; 
+
+}
+
+
+#seloAcessibilidade {
+	float:right;
+    margin :3px 5px 0px 0px;
+	width:80px;
+	height:50px;
+	background: url(../images/selo_acessibilidade-AAA.png) no-repeat 0 0;
+}
+
+#logoAcessibilidade {
+	float:left;
+	margin: 3px 5px 0px 6px;
+	width:50px;
+	height:50px;
+	background: url(../images/acessibilidade.png) no-repeat 0 0;
+}
+
+#textoSegurancaAcessivel
+{
+	margin:0px 5px 0px 5px;
+	float:left;
+}
+
+.divCaixaPostalCampos
+{
+	display: block;
+	float: left;
+	width: 99%;
+}
+
+.divCaixaPostalCampos label
+{
+	float: left;
+	text-align: left;
+	width: 100%;
+	display: inline-block;
+}
+
+.divCaixaPostalCampos input
+{
+	display: block;
+	width: 100%;
+}
+
+.divCaixaPostalCampos .tipoDestinatario
+{
+	display: block;
+	float: left;
+	width: 200px;
+}
+
+.divCaixaPostalCampos .tipoMensagem
+{
+	display: block;
+	width: 100%;
+}
+
+.divCaixaPostalCampos .divTextHolder
+{
+	overflow: auto;
+	display: block;
+	float: left;
+	width: 100%;
+	height: 300px;
+	border: 1px solid #adadad;
+}
+
+.divTextArea
+{
+	display: block;
+	float: left;
+	background: white;
+	width: 100%;
+	height: 100%;
+	text-align: left;
+}
+
+.divCaixaPostalUrgente
+{
+	display: block;
+	float:left;
+	margin: 8px 0px 0px 0px;
+}
+
+.divCaixaPostalUrgente label
+{
+	display: block;
+	float: left;
+}
+
+.divCaixaPostalUrgente input[type='checkbox']
+{
+	display: block;
+	float: left;
+	margin: 0px 0px 0px 10px;
+}
+
+.divCaixaPostalFiltro, .divCaixaPostalTipo
+{
+	display: inline-block;
+	float: left;
+	width: 99%;
+}
+
+.divCaixaPostalFiltro label
+{
+	display: block;
+	float: left;
+	margin: 8px 6px 6px 0px;
+}
+
+.divCaixaPostalFiltro input[type='text']
+{
+	display: block;
+	float: left;
+	width: 120px;
+	margin: 6px 15px 6px 0px;
+}
+
+.divCaixaPostalFiltro .button
+{
+	display: inline-block;
+	float: left;
+	margin-top: 4px;
+}
+
+.divCaixaPostalTipo label
+{
+	display: block;
+	float: left;
+	width: 30px;
+	margin: 8px 15px 6px 0px;
+}
+
+.divCaixaPostalTipo select
+{
+	display: block;
+	float: left;
+	width: 150px;
+	margin: 6px 0px 0px 0px;
+}
+
+.divLabel70Campo
+{
+	margin: 4px 0px 4px 20px;
+	display: block;
+	width: 99%;
+}
+
+.divLabel70Campo label
+{
+	float: left;
+	text-align: left;
+	width: 70px;
+	display: inline-block;
+}
+
+.divLabel70Campo input
+{
+	display: block;
+	float: left;
+}
+
+.divLabel70Campo input.alinharEsquerda
+{
+	float: left;
+}
+
+.divLabel70Campo span.alinharEsquerda
+{
+	float: left;
+}
+
+.divLabel70Campo input.botao
+{
+	margin-top: -1px;
+	text-align: center;
+}
+
+.divLabel70Campo textarea
+{
+	display: block;
+}
+
+.divLabel70Campo select
+{
+	display: block;
+	overflow: auto;
+}
+
+
+.divLabel125Campo
+{
+	margin: 4px 0px 4px 20px;
+	display: block;
+	width: 99%;
+}
+
+.divLabel125Campo label
+{
+	float: left;
+	text-align: left;
+	width: 125px;
+	display: inline-block;
+}
+
+.divLabel125Campo input
+{
+	display: block;
+}
+
+.divLabel125Campo input.alinharEsquerda
+{
+	float: left;
+}
+
+.divLabel125Campo input.botao
+{
+	margin-top: -1px;
+	text-align: center;
+}
+
+.divLabel125Campo textarea
+{
+	display: block;
+}
+
+.divLabel125Campo select
+{
+	display: block;
+}
+
+
+
+.divLabel200Campo
+{
+	margin: 4px 0px 4px 20px;
+	display: block;
+	width: 99%;
+}
+
+.divLabel200Campo label
+{
+	float: left;
+	text-align: left;
+	width: 200px;
+	display: inline-block;
+}
+
+.divLabel200Campo input
+{
+	display: block;
+}
+
+.divLabel200Campo textarea
+{
+	display: block;
+}
+
+.divLabel200Campo select
+{
+	display: block;
+}
+
+.painel
+{
+	margin-left: auto;
+	margin-right: auto;
+}
+
+.email
+{
+	/*
+	position: absolute;
+	top: 62px;
+	right: 32px;*/
+	display: block;
+	margin-right: 10px;
+	float: right;
+	cursor: pointer;
+	text-align: center;
+}
+
+.email span
+{
+	top: -13px;
+	left: 0px;
+	position: relative;
+	width: 120px;
+	color: #C00;
+	font-size: 0.53em;
+}
+
+.email .fundoEmail span
+{
+	color: #FFF;
+	position: relative;
+	top: -18px;
+	left: -55px;
+}
+
+.divFuncionalidadePerfil
+{
+	display: inline-block;
+	width: 100%;
+}
+
+.divFuncionalidadePerfil #Perfis
+{
+	display: inline-block;
+	float: left;
+	width: 49%;
+	height: 300px;
+	text-align: left;
+	text-decoration: none;
+	overflow: auto;
+}
+
+.divFuncionalidadePerfil #Funcionalidades
+{
+	display: inline-block;
+	float: left;
+	overflow: auto;
+	width: 49%;
+	height: 300px;
+	text-align: left;
+	text-decoration: none;
+	background-color: White;
+}
+
+.divFuncionalidadePerfil #labelPerfil
+{
+	margin: 2px 0px 2px 0px;
+	display: inline-block;
+	float: left;
+	text-align: left;
+}
+
+.divFuncionalidadePerfil #labelFuncionalidade
+{
+	margin: 2px 0px 2px 0px;
+	display: inline-block;
+	float: left;
+	text-align: left;
+	margin-left: 46%;
+}
+
+.separadorTreeview
+{
+	display: inline-block; 
+	width: 1%; 
+	float: left;
+	margin-top: 13%;
+}
+
+.Ocultar
+{
+    display:none;    
+}
+
+#Conexao div.formEsquerda
+{
+    text-align: left;
+    margin-top:5px;
+}
+
+#Conexao div.formEsquerda label
+{
+    width:20%;
+    display:inline-block;
+}
+
+#Conexao div.margemTopo
+{
+    margin-top:25px;
+}

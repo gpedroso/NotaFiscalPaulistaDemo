@@ -1,0 +1,650 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<!-- saved from url=(0071)https://www.nfp.fazenda.sp.gov.br/ConsultaUsuario/ConsultaListaNF2.aspx -->
+<html xmlns="http://www.w3.org/1999/xhtml" lang="pt" xml:lang="pt"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8"><title>
+	Cupom Fiscal
+</title><meta name="author" content="DTI"><meta name="description" content="Secretaria da Fazenda do Estado de São Paulo"><meta name="copyright" content="Copyright © 2007 Secretaria da Fazenda do Estado de São Paulo - Todos os direitos reservados"><meta http-equiv="X-UA-Compatible" name="CompatibilidadeIE" content="IE=8">
+	<link href="./Cupom_20160720_files/reset.css" rel="stylesheet" type="text/css">
+	<link href="./Cupom_20160720_files/estiloAcessivel.css" rel="stylesheet" type="text/css">
+	<link href="./Cupom_20160720_files/zipConteudo.ashx" rel="stylesheet" type="text/css">
+    
+	<script src="./Cupom_20160720_files/zipConteudo(1).ashx" language="javascript" type="text/javascript"></script>
+	<script src="./Cupom_20160720_files/internet.js" language="javascript" type="text/javascript"></script>
+	<script src="./Cupom_20160720_files/zipConteudo(2).ashx" language="javascript" type="text/javascript"></script>
+	<script src="./Cupom_20160720_files/zipConteudo(3).ashx" language="javascript" type="text/javascript"></script>
+	<script src="./Cupom_20160720_files/jquery.ui.datepicker-pt-BR.js" language="javascript" type="text/javascript"></script>
+	<script src="./Cupom_20160720_files/zipConteudo(4).ashx" language="javascript" type="text/javascript"></script>
+	<script src="./Cupom_20160720_files/accessKey.js" language="javascript" type="text/javascript"></script>
+	<script src="./Cupom_20160720_files/help_ca.js" language="javascript" type="text/javascript"></script>
+    <!-- 
+        Codigo para ativacao do application insights
+    -->
+    <script type="text/javascript">
+      var appInsights=window.appInsights||function(config){
+        function r(config){t[config]=function(){var i=arguments;t.queue.push(function(){t[config].apply(t,i)})}}var t={config:config},u=document,e=window,o="script",s=u.createElement(o),i,f;for(s.src=config.url||"//az416426.vo.msecnd.net/scripts/a/ai.0.js",u.getElementsByTagName(o)[0].parentNode.appendChild(s),t.cookie=u.cookie,t.queue=[],i=["Event","Exception","Metric","PageView","Trace"];i.length;)r("track"+i.pop());return r("setAuthenticatedUserContext"),r("clearAuthenticatedUserContext"),config.disableExceptionTracking||(i="onerror",r("_"+i),f=e[i],e[i]=function(config,r,u,e,o){var s=f&&f(config,r,u,e,o);return s!==!0&&t["_"+i](config,r,u,e,o),s}),t
+        }({
+            instrumentationKey:"7c44fc1a-c48a-4c01-b1f8-5c64935cdadf",
+            disableAjaxTracking: true,
+            disableExceptionTracking: true,
+            samplingPercentage: 10
+        });
+       
+        window.appInsights=appInsights;
+        appInsights.trackPageView();
+    </script><script src="./Cupom_20160720_files/ai.0.js"></script>
+
+	<script language="javascript" type="text/javascript">
+
+	    $(function () {
+	        //Ajustar borda do container no IE
+	        if ($.browser.msie && $.browser.version < '9.0') {
+	            $('.containerConteudo').css('behavior', 'url(\'/styles/border-radius.htc\')');
+	        }
+
+			$(".email").click(function() {
+				window.location.href = '/CaixaPostal/CaixaPostalEntrada.aspx';
+			});
+
+	        $.datepicker.setDefaults($.datepicker.regional["pt-BR"]);
+
+	        $("input[type='text']").each(function () {
+	            if ($(this).val() == $(this).data('value')) {
+	                $(this).removeClass('text');
+	                $(this).addClass('corClara');
+	            }
+	            $(this).focus(function () {
+	                if ($(this).val() == $(this).data('value')) {
+	                    $(this).val('');
+	                    $(this).removeClass('corClara');
+	                    $(this).addClass('text');
+	                }
+	            });
+	        });
+
+	        $("input[type='password']").each(function () {
+	            if ($(this).val() != '') {
+	                $(this).removeClass('text');
+	                $(this).addClass('corBranca');
+	            }
+	            $(this).focus(function () {
+	                $(this).removeClass('corBranca');
+	                $(this).addClass('text');
+
+	                if ($(this).val() == $(this).data('value'))
+	                    $(this).val('');
+	            });
+	        });
+
+	        $('#UserNameAcessivel').keypress(function (event) {
+	            if (event.keyCode == 13) {
+	                $('#btnAcessar').click();
+	                event.preventDefault();
+	            }
+	        });
+	        $('#PasswordAcessivel').keypress(function (event) {
+	            if (event.keyCode == 13) {
+	                $('#btnAcessar').click();
+	                event.preventDefault();
+	            }
+	        });
+	        $('#ImagemRandAcessivel').keypress(function (event) {
+	            if (event.keyCode == 13) {
+	                $('#btnAcessar').click();
+	                event.preventDefault();
+	            }
+	        });
+
+	        $('#divMensagemMaster').dialog({
+	            autoOpen: false,
+	            resizable: false,
+	            width: 300,
+	            modal: true,
+	            buttons: { "Ok": function () { $(this).dialog("close"); } }
+	        });
+
+	        $('#divMensagemMaster').dialog({
+	            open: function (event, ui) {
+	                //$(this).parents(".ui-dialog:first").find(".ui-icon").removeClass("ui-icon").addClass("ui-icon2");
+	                $(this).parents(".ui-dialog:first").find(".ui-widget-header").removeClass("ui-widget-header").addClass("ui-widget-header-info");
+	            }
+	        });
+
+	        $('#divErroMaster').dialog({
+	            autoOpen: false,
+	            width: 300,
+	            modal: true,
+	            buttons: { "Ok": function () { $(this).dialog("close"); } }
+	        });
+
+	        $('#divErroMaster').dialog({
+	            open: function (event, ui) {
+	                //$(this).parents(".ui-dialog:first").find(".ui-icon").removeClass("ui-icon").addClass("ui-icon2");
+	                $(this).parents(".ui-dialog:first").find(".ui-widget-header").removeClass("ui-widget-header").addClass("ui-widget-header-error");
+	            }
+	        });
+
+	        $('#divPerguntaMaster').dialog({
+	            autoOpen: false,
+	            width: 300,
+	            modal: true,
+	            //buttons: { "Ok": function () { $(this).dialog("close"); } }
+	        });
+
+	        $('#divPerguntaMaster').dialog({
+	            open: function (event, ui) {
+	                //$(this).parents(".ui-dialog:first").find(".ui-icon").removeClass("ui-icon").addClass("ui-icon2");
+	                $(this).parents(".ui-dialog:first").find(".ui-widget-header").removeClass("ui-widget-header").addClass("ui-widget-header-quest");
+                    $(this).parents(".ui-dialog:first").find(".ui-icon").removeClass("ui-icon").addClass("ui-icon_Mensagem");
+	            }
+	        });
+
+	        changeLabel();
+	    });
+
+	    function acessarBarraAcessibilidade() {
+
+	        var tipo = $('#ddlTipoUsuario').val();
+	        $(tipo).click();
+
+		    $('#UserName').val($('#UserNameAcessivel').val());
+		    $('#Password').val($('#PasswordAcessivel').val());
+
+		    if ($("#ImagemRand").length > 0) {
+		        $('#ImagemRand').val($('#ImagemRandAcessivel').val());
+		    }
+
+		    $('#Login').click();
+		}
+
+		function esqueciBarraAcessibilidade() {
+
+			$('#ddlTipoUsuario').val('#rdBtnNaoContribuinte');
+			var tipo = $('#ddlTipoUsuario').val();
+		   	$(tipo).click();
+
+
+		   	$('#UserName').val($('#UserNameAcessivel').val());
+
+
+
+		   	$('#lkbEsqueci').click();
+		}
+
+		function goToMenu() {
+		    $('#MenuSuperior li').each(function () {
+		        Sys.WebForms.Menu._domHelper.removeEvent(this, 'mouseover', Sys.WebForms.MenuItem._onmouseover);
+		        Sys.WebForms.Menu._domHelper.removeEvent(this, 'mouseout', Sys.WebForms.MenuItem._onmouseout);
+		        //Sys.WebForms.Menu._domHelper.removeEvent(this, 'focus', Sys.WebForms._MenuContainer.prototype._onfocus, true);
+		        //Sys.WebForms.Menu._domHelper.removeEvent(this, 'keydown', Sys.WebForms._MenuContainer.prototype._onkeydown);
+		    });
+
+		    $('#MenuSuperior ul').show();
+		    location.hash = '#menuAnchor';
+		}
+
+		function goToConteudo() {
+		    location.hash = '#contedoPrincipalAnchor';
+		}
+
+		function changeLabel() {
+
+			$('#linkEsqueciMinhaSenha').hide();
+			$('#linkAcessibilidadeCadastroPF').hide();
+			
+		    if ($('#ddlTipoUsuario').val() == '#rdBtnNaoContribuinte') {
+		    	$('#lblCpfCNPJ').text('CPF/CNPJ:');
+		    	$('#linkEsqueciMinhaSenha').show();
+		    	$('#linkAcessibilidadeCadastroPF').show();
+		    } else if ($('#ddlTipoUsuario').val() == '#rdBtnProcon') {
+		        $('#lblCpfCNPJ').text('CPF:');
+		    } else  {
+		        $('#lblCpfCNPJ').text('Usuário:');
+			}
+
+
+		}
+	</script>
+</head>
+<body>
+
+<div id="tooltip"></div>
+
+	
+
+<form name="aspnetForm" method="post" action="https://www.nfp.fazenda.sp.gov.br/AreaPublica/VisualizarECF.aspx" id="aspnetForm">
+<div>
+<input type="hidden" name="__VIEWSTATE" id="__VIEWSTATE" value="/wEPDwULLTEzOTIzODA3MTgPFggeCkNhbGxlclBhZ2UFJ34vQ29uc3VsdGFVc3VhcmlvL0NvbnN1bHRhTGlzdGFORjIuYXNweB4LQ29udGV4dERhdGEy3gcAAQAAAP////8BAAAAAAAAAAwCAAAAP0FwcF9Db2RlLCBWZXJzaW9uPTAuMC4wLjAsIEN1bHR1cmU9bmV1dHJhbCwgUHVibGljS2V5VG9rZW49bnVsbAwDAAAAVVNlZmF6Lk5GUC5CdXNpbmVzcywgVmVyc2lvbj0xLjAuMC4wLCBDdWx0dXJlPW5ldXRyYWwsIFB1YmxpY0tleVRva2VuPWMzYmI1ZjA5Y2RjN2I1YTEFAQAAACxCci5Hb3YuU3AuRmF6ZW5kYS5ORlAuV2ViLkNvbnN1bHRhTkZQQ29udGV4dBAAAAAFaWRORlAMY25wakVtaXRlbnRlEGNucGpEZXN0aW5hdGFyaW8Kbk5GSW5pY2lhbAhuTkZGaW5hbAZtb2RlbG8PdGlwb0RvY0NvbnN1bHRhB25yb0xvdGULZGF0YUluaWNpYWwJZGF0YUZpbmFsCHNpdHVhY2FvDHRpcG9Db25zdWx0YQhvcmlnZW1ORhRleGliaXJDb2x1bmFSZWplaXRhcgdfcGFnaW5hFl9tZW5zYWdlbVJlc3Vtb0NyZWRpdG8BAQEBAQEEAQEBAQQBAAAEOkJyLkdvdi5TcC5GYXplbmRhLk5GUC5CdXNpbmVzcy5FbnVtcy5UaXBvRG9jdW1lbnRvQ29uc3VsdGEDAAAAMUJyLkdvdi5TcC5GYXplbmRhLk5GUC5CdXNpbmVzcy5FbnVtcy5UaXBvQ29uc3VsdGEDAAAAAQhCQnIuR292LlNwLkZhemVuZGEuTkZQLldlYi5Db25zdWx0YU5GUENvbnRleHQrTWVuc2FnZW1SZXN1bW9DcmVkaXRvAgAAAAIAAAAKBgQAAAAABgUAAAALMzI0NDUwNTQ4MTgJBAAAAAkEAAAABgcAAAACQ0YF+P///zpCci5Hb3YuU3AuRmF6ZW5kYS5ORlAuQnVzaW5lc3MuRW51bXMuVGlwb0RvY3VtZW50b0NvbnN1bHRhAQAAAAd2YWx1ZV9fAAgDAAAAAQAAAAkEAAAABgoAAAAKMDEvMDcvMjAxNgYLAAAAEzMxLzEyLzIwMTYgMjM6NTk6MDAJBAAAAAXz////MUJyLkdvdi5TcC5GYXplbmRhLk5GUC5CdXNpbmVzcy5FbnVtcy5UaXBvQ29uc3VsdGEBAAAAB3ZhbHVlX18ACAMAAAAAAAAACgAAAAAABfL///9CQnIuR292LlNwLkZhemVuZGEuTkZQLldlYi5Db25zdWx0YU5GUENvbnRleHQrTWVuc2FnZW1SZXN1bW9DcmVkaXRvAQAAAAd2YWx1ZV9fAAgCAAAAAwAAAAseB19jb2RDQ0YoKVlTeXN0ZW0uSW50NjQsIG1zY29ybGliLCBWZXJzaW9uPTQuMC4wLjAsIEN1bHR1cmU9bmV1dHJhbCwgUHVibGljS2V5VG9rZW49Yjc3YTVjNTYxOTM0ZTA4OQs4NDYzMTk0Mjc0NB4GX2NvZEV1KCsEBjYxNzQ5MxYCZg9kFgICAw9kFgwCAw8WAh4FY2xhc3MFGWJhcnJhQWNlc3NpYmlsaWRhZGVOb3JtYWwWAgIDD2QWAgIDDxBkZBYBAgFkAgQPZBYEAgEPDxYCHghJbWFnZVVybAUZfi9pbWFnZXMvaWNDeFBvc3RhbFNNLnBuZ2RkAgMPDxYCHgdWaXNpYmxlaGRkAgYPDxYCHgRUZXh0BRROb3RhIEZpc2NhbCBQYXVsaXN0YWRkAgcPZBYCAgEPZBYCZg9kFgJmD2QWAgIBDzwrAA0BDBQrAAoFIzA6MCwwOjEsMDoyLDA6MywwOjQsMDo1LDA6NiwwOjcsMDo4FCsAAhYEHwcFB0luw61jaW8eC05hdmlnYXRlVXJsBQ8vcHJpbmNpcGFsLmFzcHhkFCsAAhYEHwcFCUNvbnN1bHRhch4KU2VsZWN0YWJsZWgUKwADBQcwOjAsMDoxFCsAAhYEHwcFEkRvY3VtZW50b3MgRmlzY2Fpcx4FVmFsdWUFDENPTlNVTFRBUl9ORmQUKwACFgQfBwUPVHJhbnNmZXLDqm5jaWFzHwoFGENPTlNVTFRBUl9UUkFOU0ZFUkVOQ0lBU2QUKwACFgQfBwUIU29ydGVpb3MfCWgUKwADBQcwOjAsMDoxFCsAAhYEHwcFE1Zpc3VhbGl6YXIgU29ydGVpb3MfCgUaU09SVEVJT19WSVNVQUxJWkFSX1NPUlRFSU9kFCsAAhYEHwcFFEhpc3TDs3JpY28gZGUgQWNlaXRlHwoFGFNPUlRFSU9fSElTVE9SSUNPX0FDRUlURWQUKwACFgQfBwUJRW50aWRhZGVzHwloFCsAAgUDMDowFCsAAhYEHwcFEURvYcOnw6NvIGRlIE5vdGFzHwgFMC9FbnRpZGFkZXNGaWxhbnRyb3BpY2FzL0RvYWNhb05vdGFzTGlzdGFnZW0uYXNweGQUKwACFgQfBwUMUmVjbGFtYcOnw6NvHwloFCsAAwUHMDowLDA6MRQrAAIWBB8HBQlDb25zdWx0YXIfCAUxL1JlY2xhbWFjYW8vVUMwMDRfQ29uc3VsdGFSZWNsYW1hY2FvX3ZlcnNhbzMuYXNweGQUKwACFgQfBwUJUmVnaXN0cmFyHwgFMi9SZWNsYW1hY2FvL1VDMDAxX1JlZ2lzdHJhclJlY2xhbWFjYW9fdmVyc2FvMy5hc3B4ZBQrAAIWBB8HBQ5Db250YSBDb3JyZW50ZR8JaBQrAAQFCzA6MCwwOjEsMDoyFCsAAhYEHwcFCUNvbnN1bHRhch8IBSgvY29udGFjb3JyZW50ZS9leHRyYXRvQ29udGFDb3JyZW50ZS5hc3B4ZBQrAAIWBB8HBRJVdGlsaXphciBDcsOpZGl0b3MfCAUiL2NvbnRhY29ycmVudGUvVXRpbGl6YUNyZWRpdG8uYXNweGQUKwACFgQfBwUQRGVtb25zdHJhdGl2byBJUh8KBRBERU1PTlNUUkFUSVZPX0lSZBQrAAIWBB8HBQpDb25maWd1cmFyHwloFCsABAULMDowLDA6MSwwOjIUKwACFgQfBwUNQWx0ZXJhciBTZW5oYR8IBRsvQWRtaW5DQVQvYWx0ZXJhclNlbmhhLmFzcHhkFCsAAhYEHwcFFFBlcmZpbCBkbyBDb25zdW1pZG9yHwoFDEdFUl9EQURPU0NBVGQUKwACFgQfBwULQ2FydMOjbyBORlAfCAUjL0NvbnN1bHRhVXN1YXJpby9DcmVkZW5jaWFsTkZQLmFzcHhkFCsAAhYCHwcFDENhaXhhIFBvc3RhbBQrAAIFAzA6MBQrAAIWBB8HBQlNZW5zYWdlbnMfCAUkL0NhaXhhUG9zdGFsL0NhaXhhUG9zdGFsRW50cmFkYS5hc3B4ZBQrAAIWBB8HBQhFbmNlcnJhch8KBQZMT0dPVVRkZAIJDw8WAh8HBcACMkFBMEQzNzhDMEEzNThCMDI1Mjk5RjVEMjhEMzUwMzEwQUZCNDA0QkM5QTE2NTAyMkQzMDAxNEJENTc3MkYyMDQ4NTk4NENBMDFCOThENjEzN0U1ODU3MTI5MTg1RjVGMERGQzMwQTk0MkMwRTk0REI3NDdEQkQyRUFCMEIxNTUyOUNEQzE5QjJGNUUwQkQ0NTk1ODkzQzBFMDQwREZBMjExM0E0QzA4MDJEQjlGQjNDRjYwQUIzRTI2Njg0RjJEQkEzRjgwREM0QTZCNjk5Qjg3QkQ5MDVBQkQ0NTM2NjBGMjkyRDkwMTM5NEZDQjg1RDVFQkZDMDc4OTk3RTIzREQwQzdFQjY0REI5MzJEMDY0MUQ2OTI5Q0ZGODE3NzE0RUE5QTg0RUI4RTJGM0VBNTM4NEQ3MDU2QjhFNTgwREJkZAIKD2QWGgIBD2QWAgIBD2QWAmYPZBYIAgEPDxYCHwZoZGQCAw9kFgICAQ8WAh8HBQ4zMjQuNDUwLjU0OC0xOGQCBQ8WAh8HBRlHQUJSSUVMIEdVSU1BUkFFUyBQRURST1NPZAIHD2QWAgIBDxYCHwcFCFIkIDMwLDE1ZAIDD2QWDGYPZBYCZg8PFgIfBwUbTUVSQ0FESU5ITyBQSVJBVElOSU5HQSBMVERBZGQCAQ9kFgJmDw8WAh8HBRtNRVJDQURJTkhPIFBJUkFUSU5JTkdBIExUREFkZAICD2QWAmYPDxYCHwcFLVJVQSBJVE9ST1JPLCA3NC1KRC5QQVVMSVNUQS1TLkouRE9TIENBTVBPUy1TUGRkAgMPZBYEZg8PFgIfBwU7DQogICAgICAgICAgICAgICAgICAgICAgICBDTlBKOiYjMTYwOw0KICAgICAgICAgICAgICAgICAgICBkZAIBDw8WAh8HBQ42MDE4NjM3NjAwMDE2NGRkAgQPZBYEZg8PFgIfBwU6DQogICAgICAgICAgICAgICAgICAgICAgICBJRTomIzE2MDsgDQogICAgICAgICAgICAgICAgICAgIGRkAgEPDxYCHwcFDDY0NTAwODc1MjExM2RkAgUPZBYEZg8PFgIfBwU6DQogICAgICAgICAgICAgICAgICAgICAgICBJTTomIzE2MDsgDQogICAgICAgICAgICAgICAgICAgIGRkAgEPDxYCHwdlZGQCBQ8WAh8HBRMyMC8wNy8yMDE2IDAwOjAwOjAwZAIHDxYCHwcFBjE3Nzg4NmQCCQ8WAh8HBQYyODI2MzVkAgsPFgIfBwULMzI0NDUwNTQ4MThkAg0PFgIfB2VkAhUPFgIfBwUFU1dFREFkAhcPFgIfBwUNSUYgUy05MDAwSUlJRWQCGQ8WAh8HBQZFQ0YtSUZkAhsPFgIfBwUBMGQCIw8WAh8HBRMwMS8wMy8yMDEzIDAwOjAwOjAwZAIlDxYCHwcFFHN3MDQxMjAwMDAwMDAwMDEyMjAzZBgCBTBjdGwwMCRDb250ZXVkb1BhZ2luYSR1Y0RhZG9zVXN1YXJpbyRkYWRvc1VzdWFyaW8PD2QCBGQFImN0bDAwJE1lbnUkY29udHJvbGVNZW51JExvZ2luVmlldzEPD2QCAWSLRsDC3KB4/DAe5OUJHWVRYAzhduTxB4OSyRV/cnJgsg==">
+</div>
+
+
+<script src="./Cupom_20160720_files/WebResource.axd" type="text/javascript"></script>
+<div>
+
+	<input type="hidden" name="__VIEWSTATEGENERATOR" id="__VIEWSTATEGENERATOR" value="681032A6">
+	<input type="hidden" name="__EVENTTARGET" id="__EVENTTARGET" value="">
+	<input type="hidden" name="__EVENTARGUMENT" id="__EVENTARGUMENT" value="">
+	<input type="hidden" name="__EVENTVALIDATION" id="__EVENTVALIDATION" value="/wEdAAr/issVkHqmcnswLD+azuT1oru8yKcHhPeofuIEeSskLshXLTNcx4WexC+jtAoSkDeTZh+pSURh5PA+C9KyH88/VEKzfEFelnwEeOq+AdjtzpKAocu/AvKDhSMD/RPyAB/CFEiro4bJYkrHq49WzLNg59aTIQrd/BbDydvpCwpukhBGooRUvkb0uoEL+ufEJR0G9/bBTMRdbKEKluOlMvTejXJkFGDs/hHpCPuq6jR7I/o5vh3fKFJEaCTeRtnaRfo=">
+</div>
+
+	<div id="site">   
+
+        <!-- style:none  : estado inicial do div, quando 'virar' dialog ele será exibido  -->
+        
+
+        
+
+        
+
+        <div id="barraAcessibilidade" class="barraAcessibilidadeNormal">
+
+            <div id="barraAcessibilidadeContainer">
+
+                <div id="logoAcessibilidade"></div>
+
+                <div class="containerLinksBarraSuperior">
+
+                    <div id="linksAcessibilidadeGerais">
+                       <a href="javascript:goToMenu()" id="linkAcessibilidadeIrMenu" class="linkBarraAcessibilidade">Ir para o Menu</a>
+                       <a href="javascript:goToConteudo()" id="linkAcessibilidadeIrConteudo" class="linkBarraAcessibilidade">Ir para o Conteúdo</a>
+                    </div>
+
+                    
+
+                </div>
+
+                <div id="seloAcessibilidade"></div>
+
+            </div>
+
+        </div>
+
+
+		<div id="cabecalho">
+			<h1 id="logo">
+			   <a title="Secretaria da Fazenda do Estado de São Paulo" href="http://www.fazenda.sp.gov.br/">Secretaria da Fazenda</a>
+			</h1>
+		</div>
+
+		<div id="tituloPagina">
+			<div id="ctl00_divCaixaPostal" class="email">
+				<div class="fundoEmail">
+					<img id="ctl00_imgEmail" src="./Cupom_20160720_files/icCxPostalSM.png" style="border-width:0px;">
+					
+				</div>
+				
+			</div>
+
+			<h2>
+				
+	Cupom Fiscal
+
+			</h2>
+			<h3>
+				<span id="ctl00_lblNomeSistema">Nota Fiscal Paulista</span>
+			</h3>
+		</div>
+
+		<div id="MenuSuperior">
+            <a id="menuAnchor" name="menuAnchor" href="https://www.nfp.fazenda.sp.gov.br/ConsultaUsuario/ConsultaListaNF2.aspx#" style="font-size:0em">Menu Principal</a>
+			
+	
+		<div id="menuSuperior" style="float: left;">
+	<ul class="level1 static" tabindex="0" role="menubar" style="position: relative; width: auto; float: left;">
+		<li role="menuitem" class="static" style="position: relative; float: left;"><a class="level1 static" href="https://www.nfp.fazenda.sp.gov.br/principal.aspx" tabindex="-1">Início</a></li><li class="has-popup static" aria-haspopup="menuSuperior:submenu:3" role="menuitem" style="position: relative; float: left;"><a class="level1 static" tabindex="-1">Consultar</a><ul class="level2 dynamic" id="menuSuperior:submenu:3" style="display: none; position: absolute; top: 100%; left: 0px;">
+			<li role="menuitem" class="dynamic" style="position: relative;"><a class="level2 dynamic" href="https://www.nfp.fazenda.sp.gov.br/ConsultaUsuario/ConsultaListaNF2.aspx#" onclick="__doPostBack(&#39;ctl00$Menu$controleMenu$LoginView1$menuSuperior&#39;,&#39;Consultar\\CONSULTAR_NF&#39;)" tabindex="-1">Documentos Fiscais</a></li><li role="menuitem" class="dynamic" style="position: relative;"><a class="level2 dynamic" href="https://www.nfp.fazenda.sp.gov.br/ConsultaUsuario/ConsultaListaNF2.aspx#" onclick="__doPostBack(&#39;ctl00$Menu$controleMenu$LoginView1$menuSuperior&#39;,&#39;Consultar\\CONSULTAR_TRANSFERENCIAS&#39;)" tabindex="-1">Transferências</a></li>
+		</ul></li><li class="has-popup static" aria-haspopup="menuSuperior:submenu:7" role="menuitem" style="position: relative; float: left;"><a class="level1 static" tabindex="-1">Sorteios</a><ul class="level2 dynamic" id="menuSuperior:submenu:7" style="display: none; position: absolute; top: 100%; left: 0px;">
+			<li role="menuitem" class="dynamic" style="position: relative;"><a class="level2 dynamic" href="https://www.nfp.fazenda.sp.gov.br/ConsultaUsuario/ConsultaListaNF2.aspx#" onclick="__doPostBack(&#39;ctl00$Menu$controleMenu$LoginView1$menuSuperior&#39;,&#39;Sorteios\\SORTEIO_VISUALIZAR_SORTEIO&#39;)" tabindex="-1">Visualizar Sorteios</a></li><li role="menuitem" class="dynamic" style="position: relative;"><a class="level2 dynamic" href="https://www.nfp.fazenda.sp.gov.br/ConsultaUsuario/ConsultaListaNF2.aspx#" onclick="__doPostBack(&#39;ctl00$Menu$controleMenu$LoginView1$menuSuperior&#39;,&#39;Sorteios\\SORTEIO_HISTORICO_ACEITE&#39;)" tabindex="-1">Histórico de Aceite</a></li>
+		</ul></li><li class="has-popup static" aria-haspopup="menuSuperior:submenu:11" role="menuitem" style="position: relative; float: left;"><a class="level1 static" tabindex="-1">Entidades</a><ul class="level2 dynamic" id="menuSuperior:submenu:11" style="display: none; position: absolute; top: 100%; left: 0px;">
+			<li role="menuitem" class="dynamic" style="position: relative;"><a class="level2 dynamic" href="https://www.nfp.fazenda.sp.gov.br/EntidadesFilantropicas/DoacaoNotasListagem.aspx" tabindex="-1">Doação de Notas</a></li>
+		</ul></li><li class="has-popup static" aria-haspopup="menuSuperior:submenu:14" role="menuitem" style="position: relative; float: left;"><a class="level1 static" tabindex="-1">Reclamação</a><ul class="level2 dynamic" id="menuSuperior:submenu:14" style="display: none; position: absolute; top: 100%; left: 0px;">
+			<li role="menuitem" class="dynamic" style="position: relative;"><a class="level2 dynamic" href="https://www.nfp.fazenda.sp.gov.br/Reclamacao/UC004_ConsultaReclamacao_versao3.aspx" tabindex="-1">Consultar</a></li><li role="menuitem" class="dynamic" style="position: relative;"><a class="level2 dynamic" href="https://www.nfp.fazenda.sp.gov.br/Reclamacao/UC001_RegistrarReclamacao_versao3.aspx" tabindex="-1">Registrar</a></li>
+		</ul></li><li class="has-popup static" aria-haspopup="menuSuperior:submenu:18" role="menuitem" style="position: relative; float: left;"><a class="level1 static" tabindex="-1">Conta Corrente</a><ul class="level2 dynamic" id="menuSuperior:submenu:18" style="display: none; position: absolute; top: 100%; left: 0px;">
+			<li role="menuitem" class="dynamic" style="position: relative;"><a class="level2 dynamic" href="https://www.nfp.fazenda.sp.gov.br/contacorrente/extratoContaCorrente.aspx" tabindex="-1">Consultar</a></li><li role="menuitem" class="dynamic" style="position: relative;"><a class="level2 dynamic" href="https://www.nfp.fazenda.sp.gov.br/contacorrente/UtilizaCredito.aspx" tabindex="-1">Utilizar Créditos</a></li><li role="menuitem" class="dynamic" style="position: relative;"><a class="level2 dynamic" href="https://www.nfp.fazenda.sp.gov.br/ConsultaUsuario/ConsultaListaNF2.aspx#" onclick="__doPostBack(&#39;ctl00$Menu$controleMenu$LoginView1$menuSuperior&#39;,&#39;Conta Corrente\\DEMONSTRATIVO_IR&#39;)" tabindex="-1">Demonstrativo IR</a></li>
+		</ul></li><li class="has-popup static" aria-haspopup="menuSuperior:submenu:23" role="menuitem" style="position: relative; float: left;"><a class="level1 static" tabindex="-1">Configurar</a><ul class="level2 dynamic" id="menuSuperior:submenu:23" style="display: none; position: absolute; top: 100%; left: 0px;">
+			<li role="menuitem" class="dynamic" style="position: relative;"><a class="level2 dynamic" href="https://www.nfp.fazenda.sp.gov.br/AdminCAT/alterarSenha.aspx" tabindex="-1">Alterar Senha</a></li><li role="menuitem" class="dynamic" style="position: relative;"><a class="level2 dynamic" href="https://www.nfp.fazenda.sp.gov.br/ConsultaUsuario/ConsultaListaNF2.aspx#" onclick="__doPostBack(&#39;ctl00$Menu$controleMenu$LoginView1$menuSuperior&#39;,&#39;Configurar\\GER_DADOSCAT&#39;)" tabindex="-1">Perfil do Consumidor</a></li><li role="menuitem" class="dynamic" style="position: relative;"><a class="level2 dynamic" href="https://www.nfp.fazenda.sp.gov.br/ConsultaUsuario/CredencialNFP.aspx" tabindex="-1">Cartão NFP</a></li>
+		</ul></li><li class="has-popup static" aria-haspopup="menuSuperior:submenu:28" role="menuitem" style="position: relative; float: left;"><a class="level1 static" href="https://www.nfp.fazenda.sp.gov.br/ConsultaUsuario/ConsultaListaNF2.aspx#" onclick="__doPostBack(&#39;ctl00$Menu$controleMenu$LoginView1$menuSuperior&#39;,&#39;Caixa Postal&#39;)" tabindex="-1">Caixa Postal</a><ul class="level2 dynamic" id="menuSuperior:submenu:28" style="display: none; position: absolute; top: 100%; left: 0px;">
+			<li role="menuitem" class="dynamic" style="position: relative;"><a class="level2 dynamic" href="https://www.nfp.fazenda.sp.gov.br/CaixaPostal/CaixaPostalEntrada.aspx" tabindex="-1">Mensagens</a></li>
+		</ul></li><li role="menuitem" class="static" style="position: relative; float: left;"><a class="level1 static" href="https://www.nfp.fazenda.sp.gov.br/ConsultaUsuario/ConsultaListaNF2.aspx#" onclick="__doPostBack(&#39;ctl00$Menu$controleMenu$LoginView1$menuSuperior&#39;,&#39;LOGOUT&#39;)" tabindex="-1">Encerrar</a></li>
+	</ul>
+</div><div style="clear: left;"></div>
+    
+
+
+		</div>
+
+         <div id="contedoPrincipalAnchorDiv">
+            <a id="contedoPrincipalAnchor" href="https://www.nfp.fazenda.sp.gov.br/ConsultaUsuario/ConsultaListaNF2.aspx#" name="contedoPrincipalAnchor" style="font-size:0em">Conteúdo Principal</a>
+         </div>
+
+
+		<div id="ConteudoPrincipal" class="alinharCentro">
+			
+			
+	
+<div id="dadosDoUsuario">
+    
+                    
+                    <div id="pnlPF">
+	
+                        <p><strong>CPF:</strong>&nbsp;324.450.548-18</p>
+                    
+</div>
+                    <div>
+                        <p><strong>Usuário:</strong>&nbsp;GABRIEL GUIMARAES PEDROSO</p>
+                    </div>
+					<div id="pnlSaldo">
+	
+						<p><strong>Saldo Disponível Para Saque:&nbsp;</strong>R$ 30,15</p>
+					
+</div>
+				
+</div>
+
+    <div class="CupomFiscal">
+        <div class="CFTamanhoFixo">
+            <table id="dadosCabecalhoCF" class="CFTamanhoFixo" border="0">
+	<tbody><tr>
+		<td class="alinharCentro" colspan="2">MERCADINHO PIRATININGA LTDA</td>
+	</tr><tr>
+		<td class="alinharCentro" colspan="2">MERCADINHO PIRATININGA LTDA</td>
+	</tr><tr>
+		<td class="alinharCentro" colspan="2">RUA ITORORO, 74-JD.PAULISTA-S.J.DOS CAMPOS-SP</td>
+	</tr><tr>
+		<td class="alinharDireita" style="width:40px;">
+                        CNPJ:&nbsp;
+                    </td><td style="width:400px;">60186376000164</td>
+	</tr><tr>
+		<td class="alinharDireita" style="width:40px;">
+                        IE:&nbsp; 
+                    </td><td>645008752113</td>
+	</tr><tr>
+		<td class="alinharDireita" style="width:40px;">
+                        IM:&nbsp; 
+                    </td><td></td>
+	</tr>
+</tbody></table>
+            ------------------------------------------------------------------
+        </div>
+        <div id="dadosCorpoCF">
+            <table class="CFTamanhoFixo">
+                <tbody><tr>
+                    <td class="alinharEsquerda">
+                        20/07/2016 00:00:00
+                        CCF:
+                        177886
+                    </td>
+                    <td class="alinharDireita">
+                        <strong>COO:
+                        282635</strong>
+                    </td>
+                </tr>
+            </tbody></table>
+            <table class="CFTamanhoFixo">
+                <tbody><tr>
+                    <td class="alinharEsquerda">
+                        CNPJ/CPF consumidor:
+                        32445054818
+                    </td>
+                </tr>
+                <tr>
+                    <td class="alinharEsquerda">
+                        Nome:
+                        
+                    </td>
+                </tr>
+                <tr>
+                    <td class="alinharEsquerda">
+                        End:
+                        
+                    </td>
+                </tr>
+                <tr>
+                    <td class="alinharCentro">
+                        <p><font size="3px" class="alinharCentro"><strong>CUPOM FISCAL</strong></font></p>
+                    </td>
+                </tr>
+            </tbody></table>
+            <table style="width: 210px" class="CFTamanhoFixo">
+                <tbody><tr>
+                    <td style="width: 39px">
+                        ITEM</td>
+                    <td style="width: 67px">
+                        CÓDIGO</td>
+                    <td style="width: 8px" align="left">
+                        DESCRIÇÃO</td>
+                </tr>
+            </tbody></table>
+            
+            <table class="CFTamanhoFixo">
+                <tbody><tr>
+                    <td colspan="1" style="width: 27px">
+                    </td>
+                    <td colspan="1">QTD UN</td>
+                    <td colspan="1">
+                    </td>
+                    <td colspan="2" style="width: 115px" align="center">VL UNIT R$</td>
+                    <td colspan="1">
+                    </td>
+                    <td style="width: 56px" align="right">ST</td>
+                    <td colspan="100" align="right">VL ITEM R$</td>
+                </tr>
+            </tbody></table>
+            <div id="painelItens">
+	
+            <table class="CFTamanhoFixo" border="0" style="width:100%;">
+		<tbody><tr>
+			<td>001</td><td style="padding-left:22px;">00000000001250</td><td align="right">LARANJA MURKOTE kg</td>
+		</tr><tr>
+			<td></td><td>1,93 x </td><td align="left" style="width:3cm;">2,99</td><td align="left" style="padding-left:15px;">&nbsp;</td><td align="right" colspan="70">5,77</td>
+		</tr>
+	</tbody></table><table class="CFTamanhoFixo" border="0" style="width:100%;">
+		<tbody><tr>
+			<td>002</td><td style="padding-left:22px;">00000000014953</td><td align="right">MANGA PALMER kg</td>
+		</tr><tr>
+			<td></td><td>0,77 x </td><td align="left" style="width:3cm;">3,89</td><td align="left" style="padding-left:15px;">&nbsp;</td><td align="right" colspan="70">3,00</td>
+		</tr>
+	</tbody></table><table class="CFTamanhoFixo" border="0" style="width:100%;">
+		<tbody><tr>
+			<td>003</td><td style="padding-left:22px;">00000000000598</td><td align="right">MANDIOQUINHA kg</td>
+		</tr><tr>
+			<td></td><td>0,64 x </td><td align="left" style="width:3cm;">7,79</td><td align="left" style="padding-left:15px;">&nbsp;</td><td align="right" colspan="70">4,99</td>
+		</tr>
+	</tbody></table><table class="CFTamanhoFixo" border="0" style="width:100%;">
+		<tbody><tr>
+			<td>004</td><td style="padding-left:22px;">00000000000109</td><td align="right">LARANJA PERA kg</td>
+		</tr><tr>
+			<td></td><td>1,28 x </td><td align="left" style="width:3cm;">1,19</td><td align="left" style="padding-left:15px;">&nbsp;</td><td align="right" colspan="70">1,52</td>
+		</tr>
+	</tbody></table><table class="CFTamanhoFixo" border="0" style="width:100%;">
+		<tbody><tr>
+			<td>005</td><td style="padding-left:22px;">00000000000536</td><td align="right">CEBOLA kg</td>
+		</tr><tr>
+			<td></td><td>1,66 x </td><td align="left" style="width:3cm;">1,59</td><td align="left" style="padding-left:15px;">&nbsp;</td><td align="right" colspan="70">2,64</td>
+		</tr>
+	</tbody></table><table class="CFTamanhoFixo" border="0" style="width:100%;">
+		<tbody><tr>
+			<td>006</td><td style="padding-left:22px;">07898403950069</td><td align="right">PAO QUEIJO SABOR MINAS CONG 400g</td>
+		</tr><tr>
+			<td></td><td>1,00 x </td><td align="left" style="width:3cm;">3,25</td><td align="left" style="padding-left:15px;">&nbsp;</td><td align="right" colspan="70">3,25</td>
+		</tr>
+	</tbody></table><table class="CFTamanhoFixo" border="0" style="width:100%;">
+		<tbody><tr>
+			<td>007</td><td style="padding-left:22px;">07898403950069</td><td align="right">PAO QUEIJO SABOR MINAS CONG 400g</td>
+		</tr><tr>
+			<td></td><td>1,00 x </td><td align="left" style="width:3cm;">3,25</td><td align="left" style="padding-left:15px;">&nbsp;</td><td align="right" colspan="70">3,25</td>
+		</tr>
+	</tbody></table><table class="CFTamanhoFixo" border="0" style="width:100%;">
+		<tbody><tr>
+			<td>008</td><td style="padding-left:22px;">00000000000086</td><td align="right">GOIABA BRANCA kg</td>
+		</tr><tr>
+			<td></td><td>0,42 x </td><td align="left" style="width:3cm;">6,99</td><td align="left" style="padding-left:15px;">&nbsp;</td><td align="right" colspan="70">2,94</td>
+		</tr>
+	</tbody></table><table class="CFTamanhoFixo" border="0" style="width:100%;">
+		<tbody><tr>
+			<td>009</td><td style="padding-left:22px;">07896035210001</td><td align="right">SAL CISNE REFINADO 1kg</td>
+		</tr><tr>
+			<td></td><td>1,00 x </td><td align="left" style="width:3cm;">1,99</td><td align="left" style="padding-left:15px;">&nbsp;</td><td align="right" colspan="70">1,99</td>
+		</tr>
+	</tbody></table><table class="CFTamanhoFixo" border="0" style="width:100%;">
+		<tbody><tr>
+			<td>010</td><td style="padding-left:22px;">00000000016551</td><td align="right">ALHO ROXO kg</td>
+		</tr><tr>
+			<td></td><td>0,17 x </td><td align="left" style="width:3cm;">34,00</td><td align="left" style="padding-left:15px;">&nbsp;</td><td align="right" colspan="70">5,78</td>
+		</tr>
+	</tbody></table><table class="CFTamanhoFixo" border="0" style="width:100%;">
+		<tbody><tr>
+			<td>011</td><td style="padding-left:22px;">07896623100011</td><td align="right">LEITE XANDO TIPO A INTEGRAL 1l</td>
+		</tr><tr>
+			<td></td><td>2,00 x </td><td align="left" style="width:3cm;">3,99</td><td align="left" style="padding-left:15px;">&nbsp;</td><td align="right" colspan="70">7,98</td>
+		</tr>
+	</tbody></table><table class="CFTamanhoFixo" border="0" style="width:100%;">
+		<tbody><tr>
+			<td>012</td><td style="padding-left:22px;">07793940152009</td><td align="right">QUEIJO LA SERENISSIMA PARM 100g RAL</td>
+		</tr><tr>
+			<td></td><td>1,00 x </td><td align="left" style="width:3cm;">3,99</td><td align="left" style="padding-left:15px;">&nbsp;</td><td align="right" colspan="70">3,99</td>
+		</tr>
+	</tbody></table><table class="CFTamanhoFixo" border="0" style="width:100%;">
+		<tbody><tr>
+			<td>013</td><td style="padding-left:22px;">00000000009744</td><td align="right">QUEIJO SERRAMAR MINAS kg</td>
+		</tr><tr>
+			<td></td><td>0,37 x </td><td align="left" style="width:3cm;">21,80</td><td align="left" style="padding-left:15px;">&nbsp;</td><td align="right" colspan="70">8,07</td>
+		</tr>
+	</tbody></table><table class="CFTamanhoFixo" border="0" style="width:100%;">
+		<tbody><tr>
+			<td>014</td><td style="padding-left:22px;">00000000000055</td><td align="right">BANANA PRATA kg</td>
+		</tr><tr>
+			<td></td><td>1,59 x </td><td align="left" style="width:3cm;">3,59</td><td align="left" style="padding-left:15px;">&nbsp;</td><td align="right" colspan="70">5,71</td>
+		</tr>
+	</tbody></table><table class="CFTamanhoFixo" border="0" style="width:100%;">
+		<tbody><tr>
+			<td>015</td><td style="padding-left:22px;">07898206500010</td><td align="right">ACUCAR ORGANICO CRISTAL NATIVE 1 kg</td>
+		</tr><tr>
+			<td></td><td>1,00 x </td><td align="left" style="width:3cm;">3,99</td><td align="left" style="padding-left:15px;">&nbsp;</td><td align="right" colspan="70">3,99</td>
+		</tr>
+	</tbody></table><table class="CFTamanhoFixo" border="0" style="width:100%;">
+		<tbody><tr>
+			<td>016</td><td style="padding-left:22px;">00000000016513</td><td align="right">PERA WILLIANS kg</td>
+		</tr><tr>
+			<td></td><td>0,72 x </td><td align="left" style="width:3cm;">9,99</td><td align="left" style="padding-left:15px;">&nbsp;</td><td align="right" colspan="70">7,19</td>
+		</tr>
+	</tbody></table><table class="CFTamanhoFixo" border="0" style="width:100%;">
+		<tbody><tr>
+			<td>017</td><td style="padding-left:22px;">07891149101900</td><td align="right">CERV. STELLA ARTOIS 275ml LONG NECK</td>
+		</tr><tr>
+			<td></td><td>1,00 x </td><td align="left" style="width:3cm;">2,99</td><td align="left" style="padding-left:15px;">&nbsp;</td><td align="right" colspan="70">2,99</td>
+		</tr>
+	</tbody></table><table class="CFTamanhoFixo" border="0" style="width:100%;">
+		<tbody><tr>
+			<td>018</td><td style="padding-left:22px;">00000000000222</td><td align="right">MANGA TOMYAKI kg</td>
+		</tr><tr>
+			<td></td><td>0,43 x </td><td align="left" style="width:3cm;">2,99</td><td align="left" style="padding-left:15px;">&nbsp;</td><td align="right" colspan="70">1,29</td>
+		</tr>
+	</tbody></table><table class="CFTamanhoFixo" border="0" style="width:100%;">
+		<tbody><tr>
+			<td>019</td><td style="padding-left:22px;">07891000072950</td><td align="right">IOG. NESTLE NAT 170g</td>
+		</tr><tr>
+			<td></td><td>1,00 x </td><td align="left" style="width:3cm;">0,99</td><td align="left" style="padding-left:15px;">&nbsp;</td><td align="right" colspan="70">0,99</td>
+		</tr>
+	</tbody></table><table class="CFTamanhoFixo" border="0" style="width:100%;">
+		<tbody><tr>
+			<td>020</td><td style="padding-left:22px;">07891000072950</td><td align="right">IOG. NESTLE NAT 170g</td>
+		</tr><tr>
+			<td></td><td>1,00 x </td><td align="left" style="width:3cm;">0,99</td><td align="left" style="padding-left:15px;">&nbsp;</td><td align="right" colspan="70">0,99</td>
+		</tr>
+	</tbody></table><table class="CFTamanhoFixo" border="0" style="width:100%;">
+		<tbody><tr>
+			<td>021</td><td style="padding-left:22px;">07898577370205</td><td align="right">ESPINAFRE J WATANABE UND</td>
+		</tr><tr>
+			<td></td><td>1,00 x </td><td align="left" style="width:3cm;">3,19</td><td align="left" style="padding-left:15px;">&nbsp;</td><td align="right" colspan="70">3,19</td>
+		</tr>
+	</tbody></table><table class="CFTamanhoFixo" border="0" style="width:100%;">
+		<tbody><tr>
+			<td>022</td><td style="padding-left:22px;">07898577370472</td><td align="right">RUCULA HIIDR J WATANABE UND</td>
+		</tr><tr>
+			<td></td><td>1,00 x </td><td align="left" style="width:3cm;">2,19</td><td align="left" style="padding-left:15px;">&nbsp;</td><td align="right" colspan="70">2,19</td>
+		</tr>
+	</tbody></table><table class="CFTamanhoFixo" border="0" style="width:100%;">
+		<tbody><tr>
+			<td>023</td><td style="padding-left:22px;">07898095296063</td><td align="right">HASTES FLEX COTTON LINE L75 P50</td>
+		</tr><tr>
+			<td></td><td>1,00 x </td><td align="left" style="width:3cm;">0,89</td><td align="left" style="padding-left:15px;">&nbsp;</td><td align="right" colspan="70">0,89</td>
+		</tr>
+	</tbody></table><table class="CFTamanhoFixo" border="0">
+		<tbody><tr>
+			<td style="font-size:15px;font-weight:normal;">DESCONTO  R$</td><td align="right">R$ 0,00</td>
+		</tr><tr>
+			<td style="font-size:15px;font-weight:normal;">ACRESCIMO  R$</td><td align="right">R$ 0,00</td>
+		</tr><tr>
+			<td style="font-size:15px;font-weight:bold;">TOTAL  R$</td><td align="right">R$ 84,60</td>
+		</tr>
+	</tbody></table>
+</div>
+            <table id="tabelaItens" class="CFTamanhoFixo" border="0">
+
+</table>
+        </div>
+        <div id="dadosRodapeCF" class="CFTamanhoFixo">
+            ------------------------------------------------------------------
+            SWEDA
+            IF S-9000IIIE
+            ECF-IF
+            VERSÃO:0
+            ECF:
+            LJ:
+            OPR:
+            <br>
+            01/03/2013 00:00:00
+            <br>
+            <b>FAB:sw041200000000012203</b>
+        </div>
+    </div>
+    <div class="alinharCentro MarginBottom50px">
+		<input type="submit" name="ctl00$ConteudoPagina$btnVoltar" value="Voltar" id="btnVoltar" class="button">
+    </div>
+
+		</div>
+
+		
+<div id="footer">
+	<p>Secretaria da Fazenda do Estado de São Paulo - Av. Rangel Pestana, 300 - São Paulo - SP - CEP.01017-911 - PABX (11) 3243-3400</p>
+</div>
+	</div>
+
+<script type="text/javascript">
+//<![CDATA[
+var theForm = document.forms['aspnetForm'];
+if (!theForm) {
+    theForm = document.aspnetForm;
+}
+function __doPostBack(eventTarget, eventArgument) {
+    if (!theForm.onsubmit || (theForm.onsubmit() != false)) {
+        theForm.__EVENTTARGET.value = eventTarget;
+        theForm.__EVENTARGUMENT.value = eventArgument;
+        theForm.submit();
+    }
+}
+//]]>
+</script>
+
+
+<script type="text/javascript">new Sys.WebForms.Menu({ element: 'menuSuperior', disappearAfter: 500, orientation: 'horizontal', tabIndex: 0, disabled: false });</script></form>
+	<script type="text/javascript">
+		var _tag = new WebTrends();
+		_tag.dcsGetId();
+		_tag.dcsCustom = function () { };
+		_tag.dcsCollect();
+	</script>
+	<noscript>
+	&lt;div&gt;&lt;img alt="DCSIMG" id="DCSIMG" width="1" height="1" src="https://relatorioweb.fazenda.sp.gov.br/dcsqmp3b4100008al9ot021su_7z2l/njs.gif?dcsuri=/nojavascript&amp;amp;WT.js=No&amp;amp;WT.tv=9.3.0&amp;amp;WT.dcssip=www.nfp.fazenda.sp.gov.br"/&gt;&lt;/div&gt;
+	</noscript>
+
+
+<div class="ui-dialog ui-widget ui-widget-content ui-corner-all ui-draggable" tabindex="-1" role="dialog" aria-labelledby="ui-dialog-title-divMensagemMaster" style="display: none; z-index: 1000; outline: 0px;"><div class="ui-dialog-titlebar ui-widget-header ui-corner-all ui-helper-clearfix"><span class="ui-dialog-title" id="ui-dialog-title-divMensagemMaster">Aviso</span><a href="https://www.nfp.fazenda.sp.gov.br/ConsultaUsuario/ConsultaListaNF2.aspx#" class="ui-dialog-titlebar-close ui-corner-all" role="button"><span class="ui-icon ui-icon-closethick">close</span></a></div><div id="divMensagemMaster" class="tornaInvisivel ui-dialog-content ui-widget-content" style="display: block;">
+            <img src="./Cupom_20160720_files/IconMsgInfo.png" class="IconMsgLeft" alt="Aviso">
+            <span id="lblMensagemMaster" class="corPreta" style="font-weight:normal;"></span>
+        </div><div class="ui-dialog-buttonpane ui-widget-content ui-helper-clearfix"><div class="ui-dialog-buttonset"><button type="button" class="ui-button ui-widget ui-state-default ui-corner-all ui-button-text-only" role="button" aria-disabled="false"><span class="ui-button-text">Ok</span></button></div></div></div><div class="ui-dialog ui-widget ui-widget-content ui-corner-all ui-draggable ui-resizable" tabindex="-1" role="dialog" aria-labelledby="ui-dialog-title-divErroMaster" style="display: none; z-index: 1000; outline: 0px; position: absolute;"><div class="ui-dialog-titlebar ui-widget-header ui-corner-all ui-helper-clearfix"><span class="ui-dialog-title" id="ui-dialog-title-divErroMaster">Erro</span><a href="https://www.nfp.fazenda.sp.gov.br/ConsultaUsuario/ConsultaListaNF2.aspx#" class="ui-dialog-titlebar-close ui-corner-all" role="button"><span class="ui-icon ui-icon-closethick">close</span></a></div><div id="divErroMaster" class="tornaInvisivel ui-dialog-content ui-widget-content" style="display: block;">
+            <img src="./Cupom_20160720_files/IconMsgErr.png" class="IconMsgLeft" alt="Erro">
+			<strong><span id="lblErroMaster" class="corAviso"></span></strong>
+        </div><div class="ui-resizable-handle ui-resizable-n"></div><div class="ui-resizable-handle ui-resizable-e"></div><div class="ui-resizable-handle ui-resizable-s"></div><div class="ui-resizable-handle ui-resizable-w"></div><div class="ui-resizable-handle ui-resizable-se ui-icon ui-icon-gripsmall-diagonal-se ui-icon-grip-diagonal-se" style="z-index: 1001;"></div><div class="ui-resizable-handle ui-resizable-sw" style="z-index: 1002;"></div><div class="ui-resizable-handle ui-resizable-ne" style="z-index: 1003;"></div><div class="ui-resizable-handle ui-resizable-nw" style="z-index: 1004;"></div><div class="ui-dialog-buttonpane ui-widget-content ui-helper-clearfix"><div class="ui-dialog-buttonset"><button type="button" class="ui-button ui-widget ui-state-default ui-corner-all ui-button-text-only" role="button" aria-disabled="false"><span class="ui-button-text">Ok</span></button></div></div></div><div class="ui-dialog ui-widget ui-widget-content ui-corner-all ui-draggable ui-resizable" tabindex="-1" role="dialog" aria-labelledby="ui-dialog-title-divPerguntaMaster" style="display: none; z-index: 1000; outline: 0px; position: absolute;"><div class="ui-dialog-titlebar ui-widget-header ui-corner-all ui-helper-clearfix"><span class="ui-dialog-title" id="ui-dialog-title-divPerguntaMaster">Mensagem</span><a href="https://www.nfp.fazenda.sp.gov.br/ConsultaUsuario/ConsultaListaNF2.aspx#" class="ui-dialog-titlebar-close ui-corner-all" role="button"><span class="ui-icon ui-icon-closethick">close</span></a></div><div id="divPerguntaMaster" class="tornaInvisivel ui-dialog-content ui-widget-content" style="display: block;">
+            <img src="./Cupom_20160720_files/IconMsgQuest.png" class="IconMsgLeft" alt="Mensagem">
+            <span id="lblPerguntaMaster" class="corPreta" style="font-weight:normal;"></span>
+        </div><div class="ui-resizable-handle ui-resizable-n"></div><div class="ui-resizable-handle ui-resizable-e"></div><div class="ui-resizable-handle ui-resizable-s"></div><div class="ui-resizable-handle ui-resizable-w"></div><div class="ui-resizable-handle ui-resizable-se ui-icon ui-icon-gripsmall-diagonal-se ui-icon-grip-diagonal-se" style="z-index: 1001;"></div><div class="ui-resizable-handle ui-resizable-sw" style="z-index: 1002;"></div><div class="ui-resizable-handle ui-resizable-ne" style="z-index: 1003;"></div><div class="ui-resizable-handle ui-resizable-nw" style="z-index: 1004;"></div></div></body></html>
